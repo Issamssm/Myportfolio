@@ -91,3 +91,17 @@ const sendEmail = (e) => {
 }
 
 contactForm.addEventListener('submit', sendEmail)
+
+// animation for progresse 
+
+let sectionskills = document.querySelector(".skills");
+let spans = document.querySelectorAll(".the-progress span");
+
+window.onscroll = function () {
+    if (window.scrollY >= sectionskills.offsetTop) {
+        console.log("tamam");
+        spans.forEach((span) => {
+            span.style.width = span.dataset.width;
+        });
+    }
+};
